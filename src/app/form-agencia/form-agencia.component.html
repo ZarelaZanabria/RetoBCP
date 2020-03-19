@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Detalle Agencia</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="contenedor">
+  <form class="example-form" [formGroup]="agenciaFormGroup">
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombre de Agencia</mat-label>
+      <input matInput placeholder="input text" formControlName="txtName" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Dirección</mat-label>
+      <textarea matInput placeholder="input text" formControlName = 'txtDireccion' ></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Distrito</mat-label>
+      <textarea matInput placeholder="input text" formControlName = 'txtDistrito' ></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Latitud</mat-label>
+      <textarea matInput placeholder="input text" formControlName = 'txtLatitud'></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Longittud</mat-label>
+      <textarea matInput placeholder="input text" formControlName = 'txtLongitud'></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="updateDate()">Actualizar</button>
+  </form>
+</div>

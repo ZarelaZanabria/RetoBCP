@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+	<mat-toolbar-row>
+		<span>Agencias</span>
+	</mat-toolbar-row>
+</mat-toolbar>
+<mat-nav-list>
+	<mat-list-item *ngFor="let agencia of agenciasArrayNew">
+		<img matListAvatar src="https://www.logolynx.com/images/logolynx/03/039b004617d1ef43cf1769aae45d6ea2.png"
+			alt="Photo of a Shiba Inu">
+		<h3 matLine> {{agencia.agencia}} </h3>
+		<p matLine>
+			<span> {{agencia.departamento}} </span>
+		</p>
+		<p matLine>
+			<span>{{agencia.direccion}} </span>
+		</p>
+		<button mat-icon-button (click)="getDetails(agencia.id)">			
+			<mat-icon>stars</mat-icon>
+		</button>
+	</mat-list-item>
+</mat-nav-list>
